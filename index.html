@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="/lib/css/style.css"> 
+</head>
+<body>
+    <nav>
+        <button onclick="createInvoice('vorschau')">View PDF</button>
+    </nav>
+    <div class="modul">
+        <div class="modul-container">
+            <div class="modul-row-header">
+                <div class="row-position-header">
+                    <p>Pos</p>
+                </div>
+                <div class="row-desc">
+                    <p>Description</p>
+                </div>
+                <div class="row-amount">
+                    <p>Amount</p>
+                </div>
+                <div class="row-type">
+                    <p>Unit</p>
+                </div>
+                <div class="row-price">
+                    <p>Price(€)</p>
+                </div>
+                <div class="row-discount">
+                    <p>Discount(%)</p>
+                </div>
+                <div class="row-total">
+                    <p>Total</p>
+                </div>
+                <div class="row-action">
+                </div>
+            </div>
+            <div class="modul-row">
+                <div class="row-position">
+                    <p class="posNum disabled">1</p>
+                </div>
+                <div class="row-desc">
+                    <input type="text" class="desc" placeholder="record Service">
+                    <p class="toggle-desc" onclick="toggleDesc(this)">+</p>
+                </div>
+                <div class="row-amount">
+                    <input type="text" onfocusout="calc(this)" onfocus="this.select();" class="amount number" value="1">
+                </div>
+                <div class="row-type">
+                    <input type="text" class="type" placeholder="Unit">
+                </div>
+                <div class="row-price">
+                    <input type="text" onfocusout="calc(this),roundInput(this)" onfocus="this.select();" class="price number" value="0,00">
+                </div>
+                <div class="row-discount">
+                    <input type="text" onfocusout="calc(this),roundInput(this)" onfocus="this.select();" class="discount number" value="0,00">
+                </div>
+                <div class="row-total">
+                    <p class="total">0,00€</p>
+                </div>
+                <div class="row-action">
+                    <a onclick="removeRow(this)" id="delete-btn">✕</a>
+                </div>
+                <div class="row-long-desc hidden" id="row-long-desc">
+                    <textarea placeholder="long Description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="total-bill-container">
+            <button onclick="addRow()">New Position</button>
+            <div class="total-bill-box">
+                <div class="total-bill-text">
+                    <p>Total:</p>
+                </div>
+                <div class="total-bill-amount">
+                    <p id="total-bill">0,00 €</p>
+                </div>
+    
+                <div class="row-action">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src='../../node_modules/pdfmake/build/pdfmake.min.js'></script>
+    <script src='../../node_modules/pdfmake/build/vfs_fonts.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" integrity="sha512-a9NgEEK7tsCvABL7KqtUTQjl69z7091EVPpw5KxPlZ93T141ffe1woLtbXTX+r2/8TtTvRX/v4zTL2UlMUPgwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="lib/js/script.js"></script>
+    <script src="lib/js/dokumente.js"></script>
+</body>

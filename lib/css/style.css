@@ -1,0 +1,187 @@
+:root {
+  --root-color: #009245;
+  --main-color: #2a2b2e;
+  --main-color-light: #e7eb90;
+  --contrast-color: #5a5a66;
+  --third-color: #f5f3f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-size: 120%;
+  font: unset;
+}
+
+.modul {
+  width: 100%;
+}
+
+input {
+  border-radius: 5px;
+  font-size: large;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+  user-select: none;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid grey;
+}
+
+.modul-container {
+  border-radius: 5px;
+  border: 1px solid grey;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 26px 26px 51px #d9d9d9, -26px -26px 51px #ffffff;
+}
+
+.modul-row-header {
+  background-color: lightgrey;
+}
+
+.modul-row,
+.modul-row-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.modul-row:hover {
+  background-color: lightgray;
+}
+
+.row-position,
+.row-position-header {
+  width: 5%;
+  text-align: center;
+}
+
+.row-desc {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.row-desc input {
+  width: 90%;
+}
+
+.row-amount {
+  width: 8%;
+}
+
+.number {
+  text-align: right;
+}
+
+.row-type {
+  width: 10%;
+}
+
+.row-price {
+  width: 12%;
+}
+
+.row-discount {
+  width: 8%;
+}
+
+.row-total,
+.total-bill-amount {
+  min-width: 12%;
+  display: flex;
+  text-align: right;
+  font-weight: bold;
+}
+
+.row-action {
+  width: 5%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+#delete-btn:hover {
+  color: red;
+}
+
+.row-long-desc {
+  width: 90%;
+  margin: 0 15px 25px 20px;
+  text-align: left;
+  position: relative;
+}
+
+.row-long-desc textarea {
+  height: 100px;
+  border: 1px solid transparent;
+}
+
+.toggle-desc {
+  display: inline;
+  color: rgb(99, 99, 99);
+  font-size: x-large;
+  cursor: pointer;
+}
+
+button {
+  font-weight: bold;
+  font-size: large;
+}
+
+.total-bill-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-bill-box {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  min-width: 35%;
+  border: 1px solid grey;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 26px 26px 51px #d9d9d9, -26px -26px 51px #ffffff;
+}
